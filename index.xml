@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+	<information>
+		<name>TistoryEditor</name>
+		<version>1.0</version>
+		<description>
+			<![CDATA[ TistoryEditor의 스킨 ]]>
+		</description>
+		<license>
+			<![CDATA[ MIT License ]]>
+		</license>
+	</information>
+	<author>
+		<name>Joo</name>
+		<homepage>http://blog.joostory.net</homepage>
+		<email>joo@joostory.net</email>
+	</author>
+	<cover>
+		<item>
+			<name>download</name>
+			<label><![CDATA[Download]]></label>
+			<description><![CDATA[앱 다운로드]]></description>
+		</item>
+		<item>
+			<name>features</name>
+			<label><![CDATA[Features]]></label>
+			<description><![CDATA[앱 Feature를 표시]]></description>
+		</item>
+	</cover>
+  <variables>
+    <variable>
+      <name>use_download</name>
+      <label>다운로드 표시</label>
+      <description>Features 커버에 다운로드 표시</description>
+      <type>BOOL</type>
+      <option></option>
+      <default>true</default>
+    </variable>
+  </variables>
+	<default>
+		<recentEntries>4</recentEntries>
+		<recentComments>4</recentComments>
+		<recentTrackbacks>4</recentTrackbacks>
+		<itemsOnGuestbook>10</itemsOnGuestbook>
+		<tagsInCloud>30</tagsInCloud>
+		<sortInCloud>3</sortInCloud>
+		<expandComment>1</expandComment>
+		<lengthOfRecentNotice>25</lengthOfRecentNotice>
+		<lengthOfRecentEntry>27</lengthOfRecentEntry>
+		<lengthOfRecentComment>30</lengthOfRecentComment>
+		<lengthOfRecentTrackback>30</lengthOfRecentTrackback>
+		<lengthOfLink>30</lengthOfLink>
+		<showListOnCategory>1</showListOnCategory>
+		<showListOnArchive>1</showListOnArchive>
+		<commentMessage>
+			<none>0</none>
+			<single>1</single>
+		</commentMessage>
+		<trackbackMessage>
+			<none>0</none>
+			<single>1</single>
+		</trackbackMessage>
+		<tree>
+			<color>000000</color>
+			<bgColor>ffffff</bgColor>
+			<activeColor>000000</activeColor>
+			<activeBgColor>eeeeee</activeBgColor>
+			<labelLength>27</labelLength>
+			<showValue>1</showValue>
+		</tree>
+		<contentWidth>800</contentWidth>
+	</default>
+</skin>

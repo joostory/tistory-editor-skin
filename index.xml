@@ -17,11 +17,6 @@
 	</author>
 	<cover>
 		<item>
-			<name>download</name>
-			<label><![CDATA[Download]]></label>
-			<description><![CDATA[앱 다운로드]]></description>
-		</item>
-		<item>
 			<name>features</name>
 			<label><![CDATA[Features]]></label>
 			<description><![CDATA[앱 Feature를 표시]]></description>
@@ -36,6 +31,22 @@
       <option></option>
       <default>true</default>
     </variable>
+		<variable>
+			<name>screenshot</name>
+      <label>스크린샷</label>
+      <description>대표 스크린샷</description>
+      <type>IMAGE</type>
+      <option />
+      <default>https://tistory1.daumcdn.net/tistory/2847465/skin/images/screenshot_mac.png</default>
+		</variable>
+		<variable>
+			<name>download_url</name>
+      <label>다운로드 url</label>
+      <description>다운로드 url</description>
+      <type>STRING</type>
+      <option />
+      <default>https://github.com/joostory/tistory-editor/releases/latest</default>
+		</variable>
   </variables>
 	<default>
 		<recentEntries>4</recentEntries>

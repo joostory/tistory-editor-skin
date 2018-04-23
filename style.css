@@ -496,15 +496,36 @@ only screen and (max-width:820px) and (min-resolution: 1.5dppx) {
 
 /* 커버 */
 #tt-body-index .area_head { display:none }
-.download { background:#EDE6D5 linear-gradient(#EDE6D5, #F5F5ED) repeat scroll 0% 0%; overflow:hidden }
+.download {
+	background:#EDE6D5 linear-gradient(#EDE6D5, #F5F5ED) repeat scroll 0% 0%; overflow:hidden;
+	margin-top:-80px;
+}
 .download .title { text-align: center; font-size:64px; margin:0; padding:1.5em 0 0.5em }
-.download .screenshot { height:300px }
+.download .screenshot {
+	height:300px;
+	width: 700px;
+	margin:50px auto 0;
+}
 .download .screenshot img { max-width:100%; box-shadow:0 10px 20px #777 }
 .download .btn-download { display:inline-block; padding:20px; border:0; background:#f1631b; text-decoration: none; color:#fff; }
 .download .info { margin: 5px 0 50px }
 .download .info a { text-decoration: none; color:#f1631b}
 
-.feature { padding: 100px 0 }
+.features {
+	width: 700px;
+	margin: 100px auto;
+}
+.feature {
+	padding: 100px 0;
+}
+.feature .thumbnail {
+	float: left;
+	margin: -50px 50px 0 -50px;
+}
+.feature:nth-child(2n) .thumbnail {
+	float: right;
+	margin: -50px -50px 0 50px;
+}
 .box-mode .container { padding:100px 0 }
 .box-mode figure img { width:300px; box-shadow:0 1px 5px #ccc }
 .box-mode figure.left { float:left; margin:0 50px 0 -50px }

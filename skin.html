@@ -7,6 +7,7 @@
 	<title>[##_page_title_##]</title>
 	<link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
 
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon&amp;subset=korean" rel="stylesheet"> 
 	<link rel="stylesheet" href="./style.css">
 
 	<!--[if lt IE 9]>
@@ -35,8 +36,10 @@
 						<button type="button" class="btn_name">[##_title_##]
 							<span class="ico_skin ico_name"></span>
 						</button>
-						[##_blog_menu_##]
-						<p class="txt_condition">[##_title_##]</p>
+						<div class='list_name'>
+							[##_blog_menu_##]
+						</div>
+						<p class="txt_condition">[##_desc_##]</p>
 					</div>
 				</div>
 
@@ -92,18 +95,21 @@
 				<div id="cMain">
 
 					<s_cover_group>
-
-						<s_if_var_use_download>
-							<div class='download'>
-								<div class='title'>Tistory Editor</div>
-								<div class='wrap-download'>
-									<a href='[##_var_download_url_##]' class='btn-download'>Download App</a>
-								</div>
-								<figure class='screenshot'>
-									<img src='[##_var_screenshot_##]'>
-								</figure>
+						
+						<div class='download'>
+							<div class='title'>[##_title_##]</div>
+							<div class='wrap-download'>
+								<a href='[##_var_download_url_##]' class='btn-download'>Download App</a>
+								<div id='appInfo' class='info'></div>
 							</div>
-						</s_if_var_use_download>
+							<figure class='screenshot'>
+								<img src='[##_var_screenshot_##]'>
+							</figure>
+
+							<a href="https://github.com/joostory/tistory-editor">
+								<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+							</a>
+						</div>
 
 						<s_cover_rep>
 							<s_cover name='features'>
@@ -112,7 +118,7 @@
 										<div class='feature'>
 											<s_cover_item_thumbnail>
 												<figure class="thumbnail">
-													<img src="https://i1.daumcdn.net/thumb/C200x200/?fname=[##_cover_item_thumbnail_##]">
+													<img src="https://i1.daumcdn.net/thumb/P200x200/?fname=[##_cover_item_thumbnail_##]">
 												</figure>
 											</s_cover_item_thumbnail>
 
@@ -122,6 +128,18 @@
 									</s_cover_item>
 								</div>
 							</s_cover>
+							
+							<s_cover name='focus'>
+								<div class='focus'>
+									<s_cover_item>
+										<div class='focus-item'>
+											<h2>[##_cover_item_title_##]</h2>
+											<p>[##_cover_item_summary_##]</p>
+										</div>
+									</s_cover_item>
+								</div>
+							</s_cover>
+
 						</s_cover_rep>
 					</s_cover_group>
 
@@ -559,140 +577,21 @@
 							</div>
 						</div>
 					</s_paging>
-
-
-					<div id="mEtc" class="wrap_etc">
-						<div class="inner_aside">
-							<s_sidebar>
-								<s_sidebar_element>
-									<!-- 공지사항 -->
-									<s_rct_notice>
-										<div class="box_aside">
-											<strong>공지사항</strong>
-											<ul class="list_board">
-												<s_rct_notice_rep>
-													<li>
-														<a href="[##_notice_rep_link_##]" class="link_board">[##_notice_rep_title_##]</a>
-													</li>
-												</s_rct_notice_rep>
-											</ul>
-										</div>
-									</s_rct_notice>
-								</s_sidebar_element>
-
-
-								<s_sidebar_element>
-									<!-- 최근에 올라온 글 -->
-									<div class="box_aside">
-										<strong>최근에 올라온 글</strong>
-										<ul class="list_board">
-											<s_rctps_rep>
-												<li>
-													<a href="[##_rctps_rep_link_##]" class="link_board">[##_rctps_rep_title_##]</a>
-												</li>
-											</s_rctps_rep>
-										</ul>
-									</div>
-								</s_sidebar_element>
-
-
-
-								<s_sidebar_element>
-									<!-- 최근에 달린 댓글 -->
-									<div class="box_aside">
-										<strong>최근에 달린 댓글</strong>
-										<ul class="list_board">
-											<s_rctrp_rep>
-												<li>
-													<a href="[##_rctrp_rep_link_##]" class="link_board">[##_rctrp_rep_desc_##]</a>
-												</li>
-											</s_rctrp_rep>
-										</ul>
-									</div>
-								</s_sidebar_element>
-
-
-								<s_sidebar_element>
-									<!-- 방문자수 -->
-									<div class="box_aside lst">
-										<dl class="list_total">
-											<dt>Total</dt>
-											<dd>[##_count_total_##]</dd>
-										</dl>
-										<dl class="list_visitor">
-											<dt>Today</dt>
-											<dd>[##_count_today_##]</dd>
-										</dl>
-										<dl class="list_visitor">
-											<dt>Yesterday</dt>
-											<dd>[##_count_yesterday_##]</dd>
-										</dl>
-									</div>
-								</s_sidebar_element>
-
-
-								<s_sidebar_element>
-									<!-- 링크 -->
-									<div class="box_aside">
-										<strong>링크</strong>
-										<ul class="list_board">
-											<s_link_rep>
-												<li>
-													<a href="[##_link_url_##]" class="link_board" target="_blank">[##_link_site_##]</a>
-												</li>
-											</s_link_rep>
-										</ul>
-									</div>
-								</s_sidebar_element>
-
-
-								<s_sidebar_element>
-									<!-- 태그 클라우드 -->
-									<div class="box_aside">
-
-										<strong>TAG</strong>
-										<ul class="list_tag">
-											<s_random_tags>
-												<li>
-													<a href="[##_tag_link_##]" class="link_tag [##_tag_class_##]">[##_tag_name_##]</a>
-												</li>
-											</s_random_tags>
-										</ul>
-										<a href="[##_taglog_link_##]" class="link_more">more</a>
-									</div>
-								</s_sidebar_element>
-
-								<s_sidebar_element>
-									<!-- 달력 -->
-									<div class="box_aside">
-										[##_calendar_##]
-									</div>
-								</s_sidebar_element>
-
-								<s_sidebar_element>
-									<!-- 글 보관함 -->
-									<div class="box_aside lst">
-										<strong>글 보관함</strong>
-										<ul class="list_keep">
-											<s_archive_rep>
-												<li>
-													<a href="[##_archive_rep_link_##]" class="link_keep">[##_archive_rep_date_##]</a> ([##_archive_rep_count_##])</li>
-											</s_archive_rep>
-										</ul>
-									</div>
-								</s_sidebar_element>
-
-							</s_sidebar>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<hr class="hide">
-			<div id="dkFoot" role="contentinfo" class="area_foot">
-				Blog is powered by
-				<em class="emph_t">Tistory</em> / Designed by
-				<em class="emph_t">Tistory</em>
-			</div>
+			<footer>
+				<div class="container">
+					<div class="right-pane">
+						<a href="https://github.com/joostory">@JooStory</a>
+					</div>
+					<div class="left-pane">
+						<a href="https://github.com/joostory/tistory-editor/releases/latest">Download</a>
+						<a href="https://github.com/joostory/tistory-editor/issues">Issues</a>
+					</div>
+				</div>
+			</footer>
 		</div>
 	</s_t3>
 
@@ -700,6 +599,15 @@
 	<script>
 		(function ($) {
 			$.Area.init();
+		})(jQuery);
+	</script>
+	<script>
+		(function($) {
+			$.ajax({
+				url: 'https://joostory.github.io/tistory-editor/app.json'
+			}).done(function(res) {
+				$("#appInfo").html("Last version: " + res.version).show()
+			})
 		})(jQuery);
 	</script>
 

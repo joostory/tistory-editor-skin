@@ -21,16 +21,13 @@
 			<label><![CDATA[Features]]></label>
 			<description><![CDATA[앱 Feature를 표시]]></description>
 		</item>
+		<item>
+			<name>focus</name>
+			<label><![CDATA[Focus]]></label>
+			<description><![CDATA[주요키워드를 표시]]></description>
+		</item>
 	</cover>
   <variables>
-    <variable>
-      <name>use_download</name>
-      <label>다운로드 표시</label>
-      <description>Features 커버에 다운로드 표시</description>
-      <type>BOOL</type>
-      <option></option>
-      <default>true</default>
-    </variable>
 		<variable>
 			<name>screenshot</name>
       <label>스크린샷</label>

@@ -9,7 +9,10 @@ input,select,textarea,button {vertical-align:middle}
 input::-ms-clear {display:none}
 button {border:0 none;background-color:transparent;cursor:pointer}
 body {background:#fff}
-body,th,td,input,select,textarea,button {font-size:14px;line-height:1.5;font-family:'Noto Sans', sans-serif;color:#666} /* color값은 디자인가이드에 맞게사용 */
+body,th,td,input,select,textarea,button {
+	font-size:14px;line-height:1.5;color:#666;
+	font-family:applesdgothicneo-ultralight, "Apple SD Gothic Neo", "Nanum Gothic", "맑은 고딕", "Roboto Light", sans-serif;
+}
 a {color:#333;text-decoration:none}
 a:active, a:hover {text-decoration:underline}
 a:active {background-color:transparent}
@@ -50,6 +53,8 @@ address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 .area_head .on .ico_name { background-position: 0 -632px; }
 .area_head .link_name{display:block;padding-left:15px;margin-bottom:7px;text-decoration:none;color:#666}
 .area_head .link_name:hover { text-decoration: underline; color:#3db39e}
+.area_head .list_name li {display:block;padding-left:15px;margin-bottom:7px;text-decoration:none;color:#666}
+.area_head .list_name li:hover { color:#3db39e}
 .area_head .box_division{padding-top:13px;border-top:1px solid #f4f4f4;margin-top:9px}
 
 .area_menu{ position:fixed; right:15px; top:21px;z-index:31}
@@ -128,6 +133,12 @@ address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 .wrap_etc .list_keep li{overflow:hidden;margin-bottom:8px;font-size:12px;color:#aaa}
 .wrap_etc .link_keep{font-size:12px;color:#aaa}
 .area_foot{height:50px;font-size:12px;line-height:50px;text-align:center;background-color:#f0f0f0;color:#aaa}
+footer { background:#434342; color:#888; padding:15px 0; font-size:14px; height:22px }
+footer .container { width:700px; margin:0 auto; }
+footer .right-pane { float:right }
+footer a { text-decoration: none; color:#888; margin-right:10px }
+footer a:last-child { margin-right:0 }
+footer a:hover { color:#aaa }
 
 /* 페이징 */
 .area_paging_simple { display:none }
@@ -495,19 +506,35 @@ only screen and (max-width:820px) and (min-resolution: 1.5dppx) {
 }
 
 /* 커버 */
-#tt-body-index .area_head { display:none }
+/* 커버 */
+#tt-body-index .area_head,
+#tt-body-index .area_menu { display:none }
 .download {
 	background:#EDE6D5 linear-gradient(#EDE6D5, #F5F5ED) repeat scroll 0% 0%; overflow:hidden;
 	margin-top:-80px;
 }
-.download .title { text-align: center; font-size:64px; margin:0; padding:1.5em 0 0.5em }
+.download .title {
+	text-align: center; font-size:64px; margin:0; padding:1.5em 0 0.5em;
+	font-family: 'Do Hyeon', sans-serif;
+}
 .download .screenshot {
 	height:300px;
 	width: 700px;
 	margin:50px auto 0;
 }
 .download .screenshot img { max-width:100%; box-shadow:0 10px 20px #777 }
-.download .btn-download { display:inline-block; padding:20px; border:0; background:#f1631b; text-decoration: none; color:#fff; }
+.download .wrap-download {
+	text-align:center;
+	margin: 10px auto 50px;
+}
+.download .btn-download {
+	display:inline-block; padding:20px; border:0; background:#f1631b; text-decoration: none; color:#fff;
+	font-family: 'Do Hyeon', sans-serif;
+	transition: box-shadow 0.2s;
+}
+.download .btn-download:hover {
+	box-shadow: 0 1px 5px #999;
+}
 .download .info { margin: 5px 0 50px }
 .download .info a { text-decoration: none; color:#f1631b}
 
@@ -520,12 +547,24 @@ only screen and (max-width:820px) and (min-resolution: 1.5dppx) {
 }
 .feature .thumbnail {
 	float: left;
-	margin: -50px 50px 0 -50px;
+	margin: -50px 50px 0 0;
 }
 .feature:nth-child(2n) .thumbnail {
 	float: right;
-	margin: -50px -50px 0 50px;
+	margin: -50px 0 0 50px;
 }
+
+.focus .focus-item {
+	background-color:#aaa;
+	color:#fff;
+	padding:100px 0;
+	text-align:center;
+}
+.focus .focus-item:nth-child(2n) {
+	background-color:#fff;
+	color:#666;
+}
+
 .box-mode .container { padding:100px 0 }
 .box-mode figure img { width:300px; box-shadow:0 1px 5px #ccc }
 .box-mode figure.left { float:left; margin:0 50px 0 -50px }

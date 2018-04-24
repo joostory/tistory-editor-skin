@@ -506,7 +506,6 @@ only screen and (max-width:820px) and (min-resolution: 1.5dppx) {
 }
 
 /* 커버 */
-/* 커버 */
 #tt-body-index .area_head,
 #tt-body-index .area_menu { display:none }
 .download {
@@ -543,7 +542,7 @@ only screen and (max-width:820px) and (min-resolution: 1.5dppx) {
 	margin: 100px auto;
 }
 .feature {
-	padding: 100px 0;
+	margin: 100px 0;
 }
 .feature .thumbnail {
 	float: left;
@@ -565,19 +564,16 @@ only screen and (max-width:820px) and (min-resolution: 1.5dppx) {
 	color:#666;
 }
 
-.box-mode .container { padding:100px 0 }
-.box-mode figure img { width:300px; box-shadow:0 1px 5px #ccc }
-.box-mode figure.left { float:left; margin:0 50px 0 -50px }
-.box-mode figure.right { float:right; margin:0 -50px 0 50px }
-.box-mode .container::after { content:" "; clear:both }
-.box-mode a { color:#f1631b; text-decoration:none }
-  
-@media only screen and (max-width:1024px) {
-	.features,
-	.features .feature { height:400px }
+@media only screen and (max-width:768px) {
+	.download .screenshot { width:90%; height:200px; }
+	.features { width:100%; margin:0; }
+	.feature { margin:100px 30px }
+	
+	footer .container { width:inherit; margin:0 20px }
 }
 
-@media only screen and (max-width:768px) {
-	.features,
-	.features .feature { height:300px }
+@media only screen and (max-width:480px) {
+	.features .feature .thumbnail {
+		float:none; margin:0 auto; text-align:center;
+	}
 }
